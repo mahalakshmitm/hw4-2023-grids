@@ -7,7 +7,7 @@ a.skip{
   z-index: 1;
   /* Requirement 1 code here -- Do not remove this comment. */
   position: absolute;
-  left:-400px;
+  left:-1000px;
   top: -200px;
 
 }
@@ -50,7 +50,7 @@ img{
   /* Requirement 7 code here -- Do not remove this comment. */
 .about-image, .clients-image, .method-image, .contact-image
 {
-  grid-column: 1 / 4;
+  grid-column: 1/4;
   max-height: 500px;
   /* grid-row: auto; */
 }
@@ -81,37 +81,54 @@ img{
 
 @media only screen and (min-width: 800px)
 {
-  nav{
-    padding-top: 35px;
-    /* Requirement 10 code here -- Do not remove this comment. */
-    text-align:right;
-    alig
+nav{
+  padding-top: 35px;
+  /* Requirement 10 code here -- Do not remove this comment. */
+  text-align:right;
   }
-
   nav li{
     margin-left: 5%;
     margin-right:0;
   }
-  
   /* Requirement 11 code here -- Do not remove this comment. */
-  .skip :focus-visible{
-    text-align: left;
+  a.skip:focus{
+    left: auto;
+    top: 20px;
   }
-
   /* Requirement 12 code here -- Do not remove this comment. */
+ 
   .container{
-
+    grid-template-columns: 50px auto 500px auto 50px;
+    grid-template-rows: 300px 300px 300px 300px 
   }
   
-
-
   /* Requirement 13 code here -- Do not remove this comment. */
- 
+
+  /* The .about, .method, .clients-image, .contact-image elements:
+Begin in the third column and span two columns
+ */
+
+ .about, .method, .clients-image, .contact-image{
+  grid-column: 3 / 4;
+ }
 
   /* Requirement 14 code here -- Do not remove this comment. */
- 
 
+  /* The .clients, .contact, .about-image, and .method-image:
+Begin in the second column and span two columns.
+ */
+ 
+ .clients, .contact, .about-image,.method-image{
+  grid-column: 1 / 3;
+ }
   /* Requirement 15 code here -- Do not remove this comment. */
+  /* The image classes are modified so that they do not exceed their borders. 
+   (One way to check is to make sure that the spaces between the 
+  rows are visible and the final image doesn’t spill over into the footer.) */
+
+  .img{
+    overflow: hidden;
+  }
 }
 
 /** Code for prefers reduced motion **/
