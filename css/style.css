@@ -7,7 +7,7 @@ a.skip{
   z-index: 1;
   /* Requirement 1 code here -- Do not remove this comment. */
   position: absolute;
-  left: -500;
+  left: -500px;
   top: -200px;
 
 }
