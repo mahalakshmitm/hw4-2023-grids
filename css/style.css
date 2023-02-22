@@ -7,7 +7,7 @@ a.skip{
   z-index: 1;
   /* Requirement 1 code here -- Do not remove this comment. */
   position: absolute;
-  left:-1000px;
+  left: -500;
   top: -200px;
 
 }
@@ -22,7 +22,6 @@ nav a:focus{
 .container {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
-  /* grid-template-rows: 500px 500px 500px 500px; */
   row-gap: 30px;
 }
   /* Requirement 4 code here -- Do not remove this comment. */
@@ -92,7 +91,7 @@ nav{
     margin-right:0;
   }
   /* Requirement 11 code here -- Do not remove this comment. */
-  a.skip:focus{
+  a.skip :focus{
     left: auto;
     top: 20px;
   }
@@ -126,7 +125,7 @@ Begin in the second column and span two columns.
    (One way to check is to make sure that the spaces between the 
   rows are visible and the final image doesn’t spill over into the footer.) */
 
-  .img{
+.about-image, .method-image, .clients-image, .contact-image{
     overflow: hidden;
   }
 }
